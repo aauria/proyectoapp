@@ -26,7 +26,8 @@
     </ul>
 
 {%   block content  %} {% endblock %}
-    <img src="/imagen/arduino.png" width="600" height="300">
+ {% load static %}
+  <img src="{% static "static/arduino.png" %}" alt="My image">
     <footer>
         Derechos.Reservados AAuria
     </footer>
