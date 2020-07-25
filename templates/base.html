@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>{%block title %} {%endblock%}</title>
+    <style>
+        h1{background: aqua}
+        ul{background: bisque}
+        h1{text-align: center}
+        li{list-style: none;
+            display: inline-block;
+            border: 1px solid black;
+            padding: 15px;
+            }
+    </style>
 </head>
 <body>
-    <h1>Mi Primer Menu</h1>
+    <head>
+        <h1>Mi Primer Menu</h1>
+    </head>
+
     <ul>
         <li> <a href="{%url "home" %}">Portada</a>    </li>
         <li> <a href="{%url "about-me" %}">Acerca de</a>    </li>
          <li> <a href="{%url "contacto" %}">Contacto</a>    </li>
     </ul>
+
 {%   block content  %} {% endblock %}
+    <img src="/imagen/arduino.png" width="600" height="300">
+    <footer>
+        Derechos.Reservados AAuria
+    </footer>
 </body>
 </html>
