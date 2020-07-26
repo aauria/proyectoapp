@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <title>{%block title %} {%endblock%}</title>
     <style>
-        h1{background: aqua}
+        h1{background: aqua;
+            margin-left: 500px;
+            margin-right: 500px;
+            font-family: "Century Gothic";
+            text-align: center;
+            }
         ul{background: bisque}
-        h1{text-align: center}
         li{list-style: none;
             display: inline-block;
-            border: 1px solid black;
             padding: 15px;
+            font-family: "Century Gothic";
             }
+        img{
+            display: block;
+            margin: auto;
+        }
+        footer{
+            text-align: right;
+        }
+
     </style>
 </head>
 <body>
@@ -26,8 +38,7 @@
     </ul>
 
 {%   block content  %} {% endblock %}
- {% load static %}
-  <img src="{% static "static/arduino.png" %}" alt="My image">
+    <img src="../static/images_logo_python.jpg" width="800" height="300" >
     <footer>
         Derechos.Reservados AAuria
     </footer>
