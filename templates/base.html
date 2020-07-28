@@ -3,28 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{%block title %} {%endblock%}</title>
-    <style>
-        h1{background: aqua;
-            margin-left: 500px;
-            margin-right: 500px;
-            font-family: "Century Gothic";
-            text-align: center;
-            }
-        ul{background: bisque}
-        li{list-style: none;
-            display: inline-block;
-            padding: 15px;
-            font-family: "Century Gothic";
-            }
-        img{
-            display: block;
-            margin: auto;
-        }
-        footer{
-            text-align: right;
-        }
+    <link rel="stylesheet" type="text/css" href="../static/estilos2.css">
 
-    </style>
 </head>
 <body>
     <head>
@@ -32,9 +12,9 @@
     </head>
 
     <ul>
-        <li> <a href="{%url "home" %}">Portada</a>    </li>
+        <li> <a href="{%url "home" %}">Portada</a>          </li>
         <li> <a href="{%url "about-me" %}">Acerca de</a>    </li>
-         <li> <a href="{%url "contacto" %}">Contacto</a>    </li>
+        <li> <a href="{%url "contacto" %}">Contacto</a>     </li>
     </ul>
 
 {%   block content  %} {% endblock %}

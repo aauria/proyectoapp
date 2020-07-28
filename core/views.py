@@ -8,9 +8,6 @@ html_base="""
     </ul>
 """
 
-
-
-
 def home(request):
     html_responsde = "<h1>la pagina de portada</h1>"
     html_responsde = html_base + html_responsde
