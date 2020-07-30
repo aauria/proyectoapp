@@ -16,10 +16,16 @@ def about(request):
     html_responsde = "<h1>Acerca De </h1>"
     html_responsde = html_base + html_responsde
     return HttpResponse(html_responsde);
-def home(request, plantilla="home.html"):
+
+
+def index(request, plantilla="index.html"):
     return render(request, plantilla);
+def home(request, plantilla="home.html"):
+       return render(request, plantilla);
 def about(request, plantilla="about.html"):
     return render(request, plantilla);
 def contact(request, plantilla="contact.html"):
+    return render(request, plantilla);
+def imagen_movimiento(request, plantilla="imagen_movimiento.html"):
     return render(request, plantilla);
 # Create your views here.
