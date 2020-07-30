@@ -28,4 +28,6 @@ def contact(request, plantilla="contact.html"):
     return render(request, plantilla);
 def imagen_movimiento(request, plantilla="imagen_movimiento.html"):
     return render(request, plantilla);
+def contacto_2(request, plantilla="contacto_2.html"):
+    return render(request, plantilla);
 # Create your views here.

@@ -22,5 +22,6 @@ urlpatterns = [
     path('contact/', views.contact , name="contacto"),
     path('index/', views.index , name="presenta"),
     path('imagen_movimiento/', views.imagen_movimiento , name="imagen"),
+    path('contacto_2/', views.contacto_2 , name="New_contacto"),
     path('admin/', admin.site.urls),
 ]
