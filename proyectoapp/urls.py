@@ -23,5 +23,9 @@ urlpatterns = [
     path('index/', views.index , name="presenta"),
     path('imagen_movimiento/', views.imagen_movimiento , name="imagen"),
     path('contacto_2/', views.contacto_2 , name="New_contacto"),
+    path('nueva_pantalla/', views.nueva_pantalla , name="New_pantalla"),
+    path('contact_3/', views.contact_3, name="Contacto3"),
+    path('about_2/', views.about_2, name="new_about"),
+    path('portfolio/', views.portfolio, name="portafolio"),
     path('admin/', admin.site.urls),
 ]
