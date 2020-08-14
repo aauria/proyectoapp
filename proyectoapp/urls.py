@@ -27,5 +27,9 @@ urlpatterns = [
     path('contact_3/', views.contact_3, name="Contacto3"),
     path('about_2/', views.about_2, name="new_about"),
     path('portfolio/', views.portfolio, name="portafolio"),
+    path('actualizar_docente/', views.actualizar_docente, name="actualizar"),
+    path('consultar_docente/', views.consultar_docente, name="consultar"),
+    path('crear_docente/', views.creardocente.as_view(), name="crear"),
+    path('eliminar_docente/', views.eliminar_docente, name="eliminar"),
     path('admin/', admin.site.urls),
 ]

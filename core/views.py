@@ -1,4 +1,8 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
+from .form import DocenteForm
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
+from .models import Docente
 
 html_base="""
     <h1>Mi Primer Menu</h1>
@@ -38,4 +42,34 @@ def contact_3(request, plantilla="contact_3.html"):
     return render(request, plantilla);
 def portfolio(request, plantilla="portfolio.html"):
     return render(request, plantilla);
+#CRUD tabla docente
+def crear_docente(request):
+     if request.method == 'GET':
+         form=DocenteForm()
+         contexto={
+            'form':form
+         }
+     else:
+         form = DocenteForm(request.POST)
+         contexto = {
+             'form': form
+         }
+         if form.is_valid():
+             form.save()
+             return redirect ('New_pantalla')
+
+     return render(request,'crear_docente.html',contexto)
+
+class creardocente(CreateView):
+    model = Docente
+    form_class = DocenteForm
+    template_name = 'consultar_docente.html'
+    success_url = reverse_lazy('New_pantalla')
+
+def actualizar_docente(request,plantilla='actualizar_docente'):
+    return render(request,plantilla);
+def eliminar_docente(request,plantilla='eliminar_docente'):
+    return render(request,plantilla);
+def consultar_docente(request,plantilla='consultar_docente'):
+    return render(request,plantilla);
 # Create your views here.
